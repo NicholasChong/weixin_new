@@ -1,6 +1,6 @@
 package test.thirdparty.weixin;
 
-import com.bokesoft.thirdparty.weixin.bean.SOAResponseMessage;
+import com.dongzeviva.weixin.bean.SOAResponseMessage;
 
 public class TestMessageToJson {
 

@@ -13,9 +13,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.alibaba.fastjson.JSONObject;
-import com.bokesoft.thirdparty.weixin.common.SimpleHttpClient;
-import com.zaofans.weixin.common.PayUtils;
-import com.zaofans.weixin.common.XmlUtils;
+import com.dongzeviva.weixin.common.SimpleHttpClient;
+import com.dongzeviva.weixin.weixin.common.PayUtils;
+import com.dongzeviva.weixin.weixin.common.XmlUtils;
 
 public class TestServlet extends HttpServlet{
 	private static final long serialVersionUID = 1L;

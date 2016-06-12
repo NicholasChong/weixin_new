@@ -10,8 +10,11 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-import com.bokesoft.myerp.common.DebugUtil;
-import com.bokesoft.myerp.common.io.CloseUtil;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
+import com.dongzeviva.weixin.utils.CloseUtil;
+
 
 /**
  * 对象清理器
@@ -20,6 +23,8 @@ import com.bokesoft.myerp.common.io.CloseUtil;
  * 
  */
 public class Clear {
+	private static final Log log = LogFactory.getLog(Clear.class);
+	
 	//
 	// /**
 	// * Comment for <code>blobList</code> 数据库2进制大对象, 监听器列表
@@ -168,7 +173,7 @@ public class Clear {
 		try {
 			if (!conn.isClosed() && !conn.getAutoCommit()) {
 				conn.rollback();
-				DebugUtil.debug(">db rollback");
+				log.debug(">db rollback");
 				conn.setAutoCommit(true);
 			}
 		} catch (Throwable ignore) {
@@ -176,7 +181,7 @@ public class Clear {
 		}
 		try {
 			if (!conn.isClosed()) {
-				DebugUtil.debug(">connection closing:" + conn.hashCode());
+				log.debug(">connection closing:" + conn.hashCode());
 				conn.close();
 			}
 		} catch (Throwable ignore) {

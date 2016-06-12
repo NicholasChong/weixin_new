@@ -1,0 +1,17 @@
+package com.dongzeviva.weixin.remote.extend;
+
+import com.dongzeviva.weixin.bean.SOAResponseMessage;
+import org.apache.log4j.Logger;
+
+import com.dongzeviva.weixin.bean.message.WeixinRemoteLocationEventMessage;
+
+public class DefaultWeixinRemoteMessageHandle extends AbstractWeixinRemoteMessageHandle{
+
+	private static final Logger LOGGER = Logger.getLogger(DefaultWeixinRemoteMessageHandle.class); 
+	
+	public SOAResponseMessage handleRemoteLocationEventMessage(WeixinRmoteSession cache, WeixinRemoteLocationEventMessage remoteLocationEventMessage) throws Exception {
+		LOGGER.warn("default impl");
+		return SOAResponseMessage.NULL;
+	}
+
+}

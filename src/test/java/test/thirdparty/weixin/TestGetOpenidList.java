@@ -4,9 +4,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.alibaba.fastjson.JSONObject;
-import com.bokesoft.myerp.common.SharedBundle;
-import com.bokesoft.thirdparty.weixin.common.SimpleHttpClient;
+import com.dongzeviva.weixin.common.SimpleHttpClient;
 
 public class TestGetOpenidList {
 	public static void main(String[] args) {

@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.alibaba.fastjson.JSONObject;
-import com.bokesoft.thirdparty.weixin.common.SimpleHttpClient;
+import com.dongzeviva.weixin.common.SimpleHttpClient;
 
 public class TestOrderJson {
 

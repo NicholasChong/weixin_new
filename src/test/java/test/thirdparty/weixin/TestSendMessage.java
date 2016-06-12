@@ -7,8 +7,8 @@ import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
-import com.bokesoft.thirdparty.weixin.common.Encryptor;
-import com.bokesoft.thirdparty.weixin.common.SimpleHttpClient;
+import com.dongzeviva.weixin.common.Encryptor;
+import com.dongzeviva.weixin.common.SimpleHttpClient;
 
 public class TestSendMessage {
 	

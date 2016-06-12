@@ -1,4 +1,4 @@
-<%@page import="com.bokesoft.thirdparty.weixin.common.Kaptcha"%>
+<%@page import="com.dongzeviva.weixin.common.Kaptcha"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <%

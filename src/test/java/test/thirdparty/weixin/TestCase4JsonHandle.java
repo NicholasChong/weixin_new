@@ -1,6 +1,6 @@
 package test.thirdparty.weixin;
 
-import com.bokesoft.thirdparty.weixin.service.WeixinReplyMessageJsonBuilderImpl;
+import com.dongzeviva.weixin.service.WeixinReplyMessageJsonBuilderImpl;
 
 public class TestCase4JsonHandle {
 	public static void main(String[] args) throws Exception {

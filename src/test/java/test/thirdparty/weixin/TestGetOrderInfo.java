@@ -3,7 +3,6 @@ package test.thirdparty.weixin;
 import java.io.IOException;
 
 import com.alibaba.fastjson.JSONObject;
-import com.bokesoft.thirdparty.weixin.common.SimpleHttpClient;
 
 public class TestGetOrderInfo {
 	public static void main(String[] args) throws IOException {

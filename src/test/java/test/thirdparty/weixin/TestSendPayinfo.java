@@ -4,10 +4,6 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.bokesoft.thirdparty.weixin.common.SimpleHttpClient;
-import com.zaofans.weixin.common.PayUtils;
-import com.zaofans.weixin.common.XmlUtils;
-
 public class TestSendPayinfo {
 
 	public static void main(String[] args) throws IOException {

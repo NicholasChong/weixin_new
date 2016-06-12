@@ -1,6 +1,6 @@
 <%@page import="com.bokesoft.thirdparty.model.config.ConfigUtil"%>
-<%@page import="com.bokesoft.thirdparty.weixin.bean.WeixinPublicNumber"%>
-<%@page import="com.bokesoft.thirdparty.weixin.bean.UserInfo"%>
+<%@page import="com.dongzeviva.weixin.bean.WeixinPublicNumber"%>
+<%@page import="com.dongzeviva.weixin.bean.UserInfo"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%
 	UserInfo userinfo = (UserInfo)request.getSession().getAttribute("userinfo");

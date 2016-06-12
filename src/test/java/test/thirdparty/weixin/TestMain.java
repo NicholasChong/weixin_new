@@ -4,7 +4,7 @@ import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.zaofans.weixin.common.PayUtils;
+import com.dongzeviva.weixin.weixin.common.PayUtils;
 
 
 public class TestMain {

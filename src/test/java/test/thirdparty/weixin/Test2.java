@@ -2,8 +2,8 @@ package test.thirdparty.weixin;
 
 import java.io.IOException;
 
-import com.bokesoft.thirdparty.weixin.common.Encryptor;
-import com.bokesoft.thirdparty.weixin.common.Kaptcha;
+import com.dongzeviva.weixin.common.Encryptor;
+import com.dongzeviva.weixin.common.Kaptcha;
 
 public class Test2 {
 	static String [] codes = "abcdefghijklmnopqrstuvwxyz".split("");

@@ -1,6 +1,6 @@
 <%@page import="java.util.Iterator"%>
 <%@page import="java.util.Set"%>
-<%@page import="com.bokesoft.thirdparty.weixin.bean.WeixinPublicNumber"%>
+<%@page import="com.dongzeviva.weixin.bean.WeixinPublicNumber"%>
 <%@page import="java.util.Map"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%	

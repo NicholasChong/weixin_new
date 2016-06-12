@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.bokesoft.thirdparty.weixin.common.SimpleHttpClient;
+import com.dongzeviva.weixin.common.SimpleHttpClient;
 
 public class TestLong2Short {
 	public static void main(String[] args) {

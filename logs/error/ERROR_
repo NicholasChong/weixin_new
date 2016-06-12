@@ -1,0 +1,4 @@
+2016-06-12 12:02:40 ERROR -467 [main] WeixinContextFactory INIT FAILED
+2016-06-12 12:02:40 ERROR -467 [main] java.lang.ClassNotFoundException: com.dongzeviva.weixin.weixin.remotehandle.OrderListQueryHandle
+2016-06-12 12:04:00 ERROR -638 [main] WeixinContextFactory INIT FAILED
+2016-06-12 12:04:00 ERROR -638 [main] java.lang.ClassNotFoundException: com.bokesoft.thirdparty.attachment.LocalAttachmentManager
