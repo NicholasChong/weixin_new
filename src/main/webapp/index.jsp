@@ -4,7 +4,7 @@
 <html lang="en">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-		<title>zaofans微信服务管理平台首页</title>
+		<title>微信服务管理平台首页</title>
 		<link href="css/style.css" rel="stylesheet"/>
 		<style type="text/css">
 			.zclip{

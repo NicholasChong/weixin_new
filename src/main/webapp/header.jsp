@@ -1,4 +1,4 @@
-<%@page import="com.bokesoft.thirdparty.model.config.ConfigUtil"%>
+<%@page import="com.dongzeviva.weixin.model.config.ConfigUtil"%>
 <%@page import="com.dongzeviva.weixin.bean.WeixinPublicNumber"%>
 <%@page import="com.dongzeviva.weixin.bean.UserInfo"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>

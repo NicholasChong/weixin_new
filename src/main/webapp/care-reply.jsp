@@ -95,7 +95,7 @@
 			</div>
 			<div class="sup">
 				<input type="button" value="上传图片" class="uploadbtn">
-				<form action="/weixin-debug/m.do?type=wx-upload-image" method="post" id="zsc_myform" enctype="multipart/form-data" target="yframe">
+				<form action=serverName+"m.do?type=wx-upload-image" method="post" id="zsc_myform" enctype="multipart/form-data" target="yframe">
 					<input type="file" value="上传图片" class="uploadbtn" style="position: absolute; top: 75px; left: 20px; filter: alpha(pacity =    0); opacity: 0; z-index: 999;" onchange="zsc_upload()" name="fileName">大小不超过1M，仅限png,jpeg,jpg
 					<input type="hidden" name="sub" value="submit">
 				</form>

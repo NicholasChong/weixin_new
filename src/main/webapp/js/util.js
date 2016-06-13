@@ -1,3 +1,4 @@
+var serverName = '/weixin-debug/';
 String.prototype.Trim = function() { return this.replace(/(^\s*)|(\s*$)/g, ""); };
 String.prototype.LTrim = function() { return this.replace(/(^\s*)/g, ""); };
 String.prototype.RTrim = function() { return this.replace(/(\s*$)/g, ""); };
@@ -5,7 +6,7 @@ function command(m,p,f){
 	if(!m){
 		return;
 	}
-	$.post('/weixin-debug/m.do?type='+m,p,f,'json');
+	$.post(serverName+'m.do?type='+m,p,f,'json');
 }
 
 $(function(){
