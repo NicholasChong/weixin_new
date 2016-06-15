@@ -94,21 +94,9 @@ public class PathUtil {
     	getClassPaths();
         if (!StringUtils.isEmpty(HOME))
             return HOME;
-    	try {
-            Properties p = ReadEnv.getEnvVars();
-            if (!StringUtils.isEmpty(p.getProperty(YIGO_HOME))) {
-                HOME = p.getProperty(YIGO_HOME);
-                System.out.println("#ReadEnv.home:"+HOME);
-            }
-		} catch (Throwable ignore) {
-			ignore.printStackTrace();
-		}
         try {
 	        if (StringUtils.isEmpty(HOME)) {
-	            if (!StringUtils.isEmpty(System.getProperty(YIGO_HOME))) {
-	                HOME = System.getProperty(YIGO_HOME);
-	                System.out.println("#SystemProperty.home="+HOME);
-	            } else if (!StringUtils.isEmpty(getPropertyHome())) {
+	        	if (!StringUtils.isEmpty(getPropertyHome())) {
 	                HOME = getPropertyHome();
 	                System.out.println("#Property.home="+HOME);
 	            } else {
@@ -119,7 +107,6 @@ public class PathUtil {
         } catch (Throwable ex) {
         	throw new RuntimeException(ex);
         }
-        System.out.println("#Haiyan.home="+HOME);
         if (HOME != null && (HOME.endsWith("\\") || HOME.endsWith("/")))
             HOME = HOME.substring(0, HOME.length() - 1);
         return HOME;
@@ -132,31 +119,15 @@ public class PathUtil {
         synchronized(PathUtil.class) {
         	if (!StringUtils.isEmpty(CONFIG_HOME))
                 return CONFIG_HOME;
-	    	try {
-	            Properties p = ReadEnv.getEnvVars();
-	            if (p.containsKey(YIGO_CONFIG_HOME)) {
-	            	CONFIG_HOME = p.getProperty(YIGO_CONFIG_HOME);
-	                System.out.println("#ReadEnv.confighome:"+CONFIG_HOME);
-	            }
-			} catch (Throwable ignore) {
-				ignore.printStackTrace();
-			}
 	        try {
 		        if (StringUtils.isEmpty(CONFIG_HOME)) {
-		            if (!StringUtils.isEmpty(System.getProperty(YIGO_CONFIG_HOME))) {
-		            	CONFIG_HOME = System.getProperty(YIGO_CONFIG_HOME);
-		                System.out.println("#SystemProperty.confighome="+CONFIG_HOME);
-		            } else {
-	        			String rootName = webInfPath + File.separator + "classes";
-	        			File file = new File(rootName);
-	        			if (file.exists()) {
-		        			CONFIG_HOME = file.getAbsolutePath();
-		        			System.out.println("#UserDir.confighome="+CONFIG_HOME);
-	        			} else {
-							System.out.println("#UserDir.confighome is null");
-							return null;
-	        			}
-		            }
+        			String rootName = webInfPath + File.separator + "classes";
+        			File file = new File(rootName);
+        			if (file.exists()) {
+	        			CONFIG_HOME = file.getAbsolutePath();
+        			} else {
+						return null;
+        			}
 		        }
 	        } catch (Throwable ex) {
 	        	throw new RuntimeException(ex);

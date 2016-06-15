@@ -271,14 +271,6 @@ public class SimpleHttpClient {
 			post.releaseConnection();
 		}
 	}
-	public static void main(String[] args) throws IOException {
-		String response = SimpleHttpClient
-				.invokePost4String(
-						"Http://localhost:8300/yigo/weixin?signature=www&timestamp=www&nonce=www&echostr=wwww",
-						null, null);
-		System.out.println(response);
-
-	}
 	public static String invokePostSSLWithBody4String(String url,String mchId,String cer,String body,int timeout) throws Exception {
 		 KeyStore keyStore  = KeyStore.getInstance("PKCS12");
         FileInputStream instream = new FileInputStream(new File(cer));

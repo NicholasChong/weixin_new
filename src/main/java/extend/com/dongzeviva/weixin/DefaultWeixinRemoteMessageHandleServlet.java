@@ -2,9 +2,6 @@ package com.dongzeviva.weixin;
 
 import javax.servlet.ServletConfig;
 
-import com.dongzeviva.weixin.example.flow.DefaultFlowTest;
-import com.dongzeviva.weixin.example.flow.location.LocationFindFlowTest;
-import com.dongzeviva.weixin.example.flow.location.LocationGoFlowTest;
 import com.dongzeviva.weixin.example.weather.WeixinRemoteTextMessageWeatherCellHandle;
 import com.dongzeviva.weixin.remote.extend.DefaultWeixinRemoteContext;
 import com.dongzeviva.weixin.remote.extend.WeixinRemoteContextFactory;
@@ -16,10 +13,6 @@ public class DefaultWeixinRemoteMessageHandleServlet extends WeixinRemoteMessage
 
 	public void initWeixinConfig(ServletConfig config) {
 		DefaultWeixinRemoteContext remoteContext = (DefaultWeixinRemoteContext) WeixinRemoteContextFactory.getWeixinRemoteContext();
-		remoteContext.putWeixinMessageFlow("我要去", new LocationGoFlowTest());
-		remoteContext.putWeixinMessageFlow("附近", new LocationFindFlowTest());
-		remoteContext.putWeixinMessageFlow("远程测试", new DefaultFlowTest());
-		remoteContext.putWeixinMessageFlow("本地测试", new DefaultFlowTest());
 		remoteContext.putWeixinRemoteTextMessageCellHandle("天气", new WeixinRemoteTextMessageWeatherCellHandle());
 		remoteContext.init();
 	}

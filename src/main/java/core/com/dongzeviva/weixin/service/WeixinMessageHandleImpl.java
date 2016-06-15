@@ -35,7 +35,6 @@ import com.dongzeviva.weixin.bean.message.WeixinTextMessage;
 import com.dongzeviva.weixin.bean.message.WeixinVideoMessage;
 import com.dongzeviva.weixin.bean.message.WeixinVoiceMessage;
 import com.dongzeviva.weixin.common.Encryptor;
-import com.dongzeviva.weixin.common.TConstant;
 import com.dongzeviva.weixin.flow.WeixinMessageFlowLocalService;
 import com.dongzeviva.weixin.flow.WeixinMessageFlowLocalServiceImpl;
 import com.dongzeviva.weixin.remote.WeixinRemoteProxy;
@@ -264,7 +263,7 @@ public class WeixinMessageHandleImpl implements WeixinMessageHandle{
 	
 	private String encodeURLAppend(String uname ,String openid) throws UnsupportedEncodingException{
 		String param = uname+" "+openid+" "+System.currentTimeMillis();
-		String encrptUrl = Encryptor.encryptData2number(param, TConstant.YIGO_URL_APPEND_ENCRYPT);
+		String encrptUrl = Encryptor.encryptData2number(param, "");
 		return URLEncoder.encode(encrptUrl,"UTF-8");
 	}
 

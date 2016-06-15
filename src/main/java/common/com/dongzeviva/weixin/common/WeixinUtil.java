@@ -17,19 +17,11 @@ public class WeixinUtil {
 		return authorInfo;
 	}
 	
-	public static WeixinAuthorInfo getWeixinAuthorInfo(String data){
-		return getWeixinAuthorInfo(data, TConstant.YIGO_URL_APPEND_ENCRYPT);
-	}
-	
 	public static String [] getDecryptDataArray(String userinfo,String key){
 		if (userinfo == null || userinfo.length() == 0) {
 			return null;
 		}
 		return  Encryptor.decryptDataWithNumber(userinfo, key).split(" ");
-	}
-	
-	public static String [] getDecryptDataArray(String data){
-		return getDecryptDataArray(data, TConstant.YIGO_URL_APPEND_ENCRYPT);
 	}
 	
 }

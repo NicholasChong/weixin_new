@@ -485,21 +485,12 @@ public class ApplicationContext implements WeixinRemoteContext, Initable, Weixin
 	public void initialize(WeixinContext context) throws Exception {
 		clearContext();
 
-		// String DSN = EnvUtil.getDefaultDSN();
-		// String param = PropUtil.getProperty(getDSN(DSN),
-		// "server.soa.weixin.weixinmessage_procedure_size", null);
 		String param = PropUtil.getProperty("server.soa.weixin.weixinmessage_procedure_size");
 		if (StringUtils.isBlank(param)) {
 			warn("weixinmessage_procedure_size", "5");
 		} else {
 			TConstant.WEIXINMESSAGE_PROCEDURE_SIZE = Integer.parseInt(param);
 		}
-
-		param = PropUtil.getProperty("server.soa.weixin.yigo_url_append_encrypt");
-		if (StringUtils.isBlank(param)) {
-			throw new Exception("server.soa.weixin. can not be empty");
-		}
-		TConstant.YIGO_URL_APPEND_ENCRYPT = param;
 
 		param = PropUtil.getProperty("server.soa.weixin.server");
 		if (StringUtils.isBlank(param)) {
@@ -603,7 +594,7 @@ public class ApplicationContext implements WeixinRemoteContext, Initable, Weixin
 		initWeixinRemoteHandle();
 		initProviders();
 		initFilters();
-		LOGGER.info("yigo Weixin application context load complete.");
+		LOGGER.info("weixin application context load complete.");
 	}
 
 	private void initProviders() throws Exception {

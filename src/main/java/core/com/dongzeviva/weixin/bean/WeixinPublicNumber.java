@@ -601,7 +601,6 @@ public class WeixinPublicNumber implements Serializable {
 		}
 		// 在此处统一处理特殊菜单
 		weixinMenu = parseMenuJson(weixinMenu);
-		System.out.println("-----------------------weixinMenu---------------------" + weixinMenu);
 		this.weixinMenu = weixinMenu;
 	}
 
